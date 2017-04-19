@@ -6,8 +6,11 @@ const Discord = require('discord.js'),
     path = require('path');
 
 global.config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
+global.credentials = JSON.parse(fs.readFileSync(path.join(__dirname, 'credentials.json')));
 
 const apollon = new Discord.Client();
+
+apollon.web = require('./+web/http.js'); // Start the http server
 
 // Extends bot prototype with util functions
 const utils = fs.readdirSync('./_utils');
@@ -27,9 +30,8 @@ events.forEach((e) => {
     apollon.on(e.replace('.js', ''), require('./+events/' + e).bind(apollon));
 });
 
-const creds = JSON.parse(fs.readFileSync(path.join(__dirname, 'credentials.json')));
 // Login with token
-apollon.login(global.config.mode === 'dev' ? creds.devToken : creds.prodToken)
+apollon.login(global.config.mode === 'dev' ? global.credentials.devToken : global.credentials.prodToken)
 .then(() => {
     apollon.log('Apollon connected');
 })

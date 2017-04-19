@@ -5,6 +5,10 @@
             "masters": ["FluffyCobalt", "catboyking"]
         }
     },
+    "web": {
+        "host": "",
+        "port": ""
+    },
     "actions": {
         "welcomeMessage": {
             "guilds":

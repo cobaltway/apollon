@@ -6,7 +6,9 @@ const port = global.config.web.port,
     password = global.credentials.password;
 
 httpServer.use(require('express-basic-auth')({ // Lock the http access
-    users: { [user]: password }
+    users: { [user]: password },
+    challenge: true,
+    realm: 'Apollon ❤'
 }));
 
 httpServer.use(express.static('data')); // Serve log files

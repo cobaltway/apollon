@@ -14,6 +14,9 @@ Add a credentials.json file on the root folder.
 
 # Forever
 **Start:** `forever start apollon.js`
+
 **Stop:** `forever stopall`
+
 **Restart:** `forever restartall`
+
 **Check uptime:** `forever list`

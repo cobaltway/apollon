@@ -1,5 +1,7 @@
 if (true) {
-    const gw = new require('git-remote-update');
+    const GitWatch = require('git-remote-update');
+
+    const gw = new GitWatch();
 
     gw.on('ready', gw.watch);
     gw.on('newerCommit', gw.update);

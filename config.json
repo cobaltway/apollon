@@ -6,8 +6,7 @@
         }
     },
     "web": {
-        "host": "",
-        "port": ""
+        "port": "3000"
     },
     "actions": {
         "welcomeMessage": {

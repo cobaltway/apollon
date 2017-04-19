@@ -13,19 +13,19 @@ const apollon = new Discord.Client();
 apollon.web = require('./+web/http.js'); // Start the http server
 
 // Extends bot prototype with util functions
-const utils = fs.readdirSync('./_utils');
+const utils = fs.readdirSync('./+utils');
 utils.forEach((u) => {
     apollon[u.replace('.js', '')] = require('./+utils/' + u).bind(apollon);
 });
 
 // Extends bot prototype with action functions
-const actions = fs.readdirSync('./_actions');
+const actions = fs.readdirSync('./+actions');
 actions.forEach((a) => {
     apollon[a.replace('.js', '')] = require('./+actions/' + a).bind(apollon);
 });
 
 // Handle events
-const events = fs.readdirSync('./_events');
+const events = fs.readdirSync('./+events');
 events.forEach((e) => {
     apollon.on(e.replace('.js', ''), require('./+events/' + e).bind(apollon));
 });
@@ -37,5 +37,5 @@ apollon.login(global.config.mode === 'dev' ? global.credentials.devToken : globa
 })
 .catch(() => {
     apollon.error('Apollon failed to connect');
-    process.exit(1);
+    process.exit();
 });

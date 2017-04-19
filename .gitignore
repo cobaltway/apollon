@@ -1,3 +1,4 @@
 node_modules
-data
 credentials.json
+data/*
+!data/.gitkeep

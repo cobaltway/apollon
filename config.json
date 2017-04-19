@@ -1,0 +1,37 @@
+{
+    "mode": "dev",
+    "utils": {
+        "isMaster": {
+            "masters": ["FluffyCobalt", "catboyking"]
+        }
+    },
+    "actions": {
+        "welcomeMessage": {
+            "guilds":
+                [
+                    {
+                        "name": "Hérisson Bleu",
+                        "message": ["Bonjour ! Bienvenue sur le serveur Discord du Hérisson Bleu.\n Je suis un robot.\n Pouvez-vous m'indiquer quel site vous amène ici ? Je vous ajouterai au groupe correspondant.\n — Répondez `lgj` pour *le Grand Jeu, forum RPG*.\n — Répondez `sonic` pour *Planète Sonic, site consacré à l'univers de Sonic*.\n  Si votre site n'apparaît pas ici, ou si vous estimez devoir disposer d'un statut spécial, contactez un administrateur.\n Bon chat sur nos réseaux !"]
+                    }
+                ]
+        },
+        "addToGroup": {
+            "guilds":
+                [
+                    {
+                        "name": "Hérisson Bleu",
+                        "roles": [
+                            {
+                                "name": "Membres LGJ",
+                                "word": "lgj"
+                            },
+                            {
+                                "name": "Planete Sonic",
+                                "word": "sonic"
+                            }
+                        ]
+                    }
+                ]
+        }
+    }
+}

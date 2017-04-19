@@ -26,8 +26,4 @@ module.exports = function(message) {
     if (this.lmgtfy(message)) {
         return;
     }
-
-    if (this.saveTwitter(message)) {
-        return;
-    }
 };

@@ -8,8 +8,11 @@ By the way, the code itself is heavily documented and is probably quite easy to 
 
 # Install
 `git clone https://github.com/cobaltway/apollon`
+
 `npm install forever -g`
+
 `npm install`
+
 Add a credentials.json file on the root folder.
 
 # Forever

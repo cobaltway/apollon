@@ -6,7 +6,10 @@
 const fs = require('fs');
 
 module.exports = function(text) {
-    const message = (new Date()).toUTCString() + ' - ' + text;
+    if (text.length > 40) {
+        text = text.substr(0, 40) + '...';
+    }
+    const message = ((new Date()).toUTCString() + ' - ' + text);
     console.log(message);
     fs.writeFile('data/logs.txt', message + '\n', {
         flag: 'a'

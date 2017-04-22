@@ -6,6 +6,7 @@
 const fs = require('fs');
 
 module.exports = function(text) {
+    text = String(text || '');
     if (text.length > 40) {
         text = text.substr(0, 40) + '...';
     }

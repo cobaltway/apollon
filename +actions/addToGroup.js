@@ -20,21 +20,17 @@ module.exports = function(message) {
 
         // Get all mutual guilds with the user
         message.channel.recipient.client.guilds.forEach((mutualGuild) => {
-            this.log('authorized to fetch mutual guild: ' + mutualGuild.name);
             // For each guild configured above
             guilds.forEach((guild) => {
                 // Get intersection between those two
-                if (this.isIn(mutualGuild.name, guild.name)) {
-                    this.log('guild:' + mutualGuild.name + ' ' + guild.name);
+                if (this.equals(mutualGuild.name, guild.name)) {
                     // For each roles configured above
                     guild.roles.forEach((guildRole) => {
                         // Check if the word associated with the role is in the message
                         if (this.isIn(message.content, guildRole.word)) {
-                            this.log('recognized: ' + guildRole.name);
                             // Get the role object in the guild objet from the name
                             mutualGuild.roles.forEach((mutualGuildRole) => {
-                                this.log('authorized to fetch role: ' + mutualGuildRole.name);
-                                if (this.isIn(mutualGuildRole.name, guildRole.name)) {
+                                if (this.equals(mutualGuildRole.name, guildRole.name)) {
                                     // Finally add the role to the guild member
                                     this.log('trying to add the role ' + guildRole.name + ' on the server ' + guild.name);
                                     mutualGuild.member(message.channel.recipient).addRole(mutualGuildRole).then(() => {

@@ -7,8 +7,8 @@ const fs = require('fs');
 
 module.exports = function(text) {
     text = String(text || '');
-    if (text.length > 40) {
-        text = text.substr(0, 40) + '...';
+    if (text.length > 80) {
+        text = text.substr(0, 80) + '...';
     }
     const message = ((new Date()).toUTCString() + ' - ' + text);
     console.log(message);

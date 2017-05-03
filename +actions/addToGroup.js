@@ -32,7 +32,6 @@ module.exports = function(message) {
                             mutualGuild.roles.forEach((mutualGuildRole) => {
                                 if (this.equals(mutualGuildRole.name, guildRole.name)) {
                                     // Finally add the role to the guild member
-                                    this.log('trying to add the role ' + mutualGuildRole.name + ' on the server ' + guild.name);
                                     mutualGuild.member(message.channel.recipient).addRole(mutualGuildRole).then(() => {
                                         this.talk(message.channel, 'Vous avez été ajouté avec succès au groupe ' + guildRole.name +
                                             ' sur le serveur ' + guild.name + ' !');

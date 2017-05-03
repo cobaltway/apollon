@@ -31,7 +31,7 @@ events.forEach((e) => {
 });
 
 // Login with token
-/*
+
 apollon.login(global.config.mode === 'dev' ? global.credentials.devToken : global.credentials.prodToken)
 .then(() => {
     apollon.log('Apollon connected');
@@ -40,4 +40,4 @@ apollon.login(global.config.mode === 'dev' ? global.credentials.devToken : globa
     apollon.error('Apollon failed to connect');
     process.exit();
 });
-*/
+

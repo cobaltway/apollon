@@ -32,6 +32,23 @@
             "guilds":
                 [
                     {
+                        "name": "TestBots",
+                        "roles": [
+                            {
+                                "name": "MEMBRE",
+                                "word": "@always"
+                            },
+                            {
+                                "name": "test",
+                                "word": "test"
+                            },
+                            {
+                                "name": "RAINBOW",
+                                "word": "lgbt"
+                            }
+                        ]
+                    },
+                    {
                         "name": "Hérisson Bleu",
                         "roles": [
                             {
@@ -39,7 +56,7 @@
                                 "word": "lgj"
                             },
                             {
-                                "name": "Planete Sonic",
+                                "name": "Sonic Fans",
                                 "word": "sonic"
                             }
                         ]

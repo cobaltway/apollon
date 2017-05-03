@@ -33,20 +33,7 @@
                 [
                     {
                         "name": "TestBots",
-                        "roles": [
-                            {
-                                "name": "MEMBRE",
-                                "word": "@always"
-                            },
-                            {
-                                "name": "test",
-                                "word": "test"
-                            },
-                            {
-                                "name": "RAINBOW",
-                                "word": "lgbt"
-                            }
-                        ]
+                        "roles": []
                     },
                     {
                         "name": "Hérisson Bleu",

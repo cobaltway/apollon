@@ -8,6 +8,8 @@ module.exports = function(member) {
         return;
     }
 
+    this.log(`${member.displayName} joined the server ${member.guild.name}`);
+
     if (this.welcomeMessage(member)) {
         return;
     }

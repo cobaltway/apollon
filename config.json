@@ -19,6 +19,12 @@
                     {
                         "name": "Courant Anarchostalinien",
                         "message": ["Bonsoir wesh bonsoir. Bienvenue sur le discord du glorieux Courant Anarchostalinien. Pose toi, prends une bière, hésite pas à dire bonjour, on ne mord que les bourgeois et les fascistes."]
+                    },
+                    {
+                        "name": "Résistance & Révolution",
+                        "channel": "306534583023828993",
+                        "notify": "Bienvenue @{memberName} ! Je t'ai envoyé des instructions en privé. N'hésite pas à contacter les Mandaté-e-s du Peuple si tu as un problème.",
+                        "message": ["Bonjour à toi et bienvenue sur ce Discord de la Résistance et Révolution.\n Je suis un robot chargé de t'accueillir.\n\n Pour comprendre le fonctionnement de Discord : https://support.discordapp.com/hc/fr\n\n Tu peux être ajouté aux groupes suivants en m'écrivant ici-même les mots de commande correspondants :\n\n **Bords politiques :** Anarchiste ⮕ `anar`\n Communiste ⮕ `coco`\n Ecologiste ⮕ `ecolo`\n\n **Groupes d'action :** Informatique ⮕ `info`\n Communication ⮕ `comm`\n Légal ⮕ `legal`\n Médic ⮕ `medic`\n\n **Autres :**\n Communauté LGBT+ ⮕ `lgbt`\n\n Si tu as des questions, n'hésite pas, les @Mandaté-e-s du Peuple sont là pour ça.\n\n N'hésite pas à partager le lien du Discord (`https://discord.gg/Xj7em8M`) à tes connaissances partisanes de la résistance et la révolution."]
                     }
                 ]
         },
@@ -35,6 +41,47 @@
                             {
                                 "name": "Planete Sonic",
                                 "word": "sonic"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Résistance & Révolution",
+                        "roles": [
+                            {
+                                "name": "MEMBRE",
+                                "word": "@always"
+                            },
+                            {
+                                "name": "RAINBOW",
+                                "word": "lgbt"
+                            },
+                            {
+                                "name": "COMM",
+                                "word": "comm"
+                            },
+                            {
+                                "name": "INFORMATIQUE",
+                                "word": "info"
+                            },
+                            {
+                                "name": "Communiste",
+                                "word": "coco"
+                            },
+                            {
+                                "name": "Anarchiste",
+                                "word": "anar"
+                            },
+                            {
+                                "name": "Ecologiste",
+                                "word": "ecolo"
+                            },
+                            {
+                                "name": "LEGAL",
+                                "word": "legal"
+                            },
+                            {
+                                "name": "MEDIC",
+                                "word": "medic"
                             }
                         ]
                     }

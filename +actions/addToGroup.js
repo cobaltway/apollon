@@ -27,7 +27,7 @@ module.exports = function(message) {
                     // For each roles configured above
                     guild.roles.forEach((guildRole) => {
                         // Check if the word associated with the role is in the message
-                        if (this.isIn(message.content, guildRole.word)) {
+                        if (this.isIn(message.content, guildRole.word) || guildRole.word === '@always') {
                             // Get the role object in the guild objet from the name
                             mutualGuild.roles.forEach((mutualGuildRole) => {
                                 if (this.isIn(mutualGuildRole.name, guildRole.name)) {

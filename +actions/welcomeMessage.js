@@ -9,6 +9,12 @@ module.exports = function(member) {
         // If current guild is in the config, send the welcome message to the member
         if (guild.name === member.guild.name) {
             this.talk(member.user, guild.message);
+
+            // If there is a notify chan, also send a notification to it
+            if (guild.channel && guild.notify) {
+                this.talk(guild.channels[guild.channel], guild.notify.replace(/@\{memberName\}/g, member.displayName));
+            }
+
             return true;
         }
     });

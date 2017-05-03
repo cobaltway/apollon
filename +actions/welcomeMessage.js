@@ -12,7 +12,7 @@ module.exports = function(member) {
 
             // If there is a notify chan, also send a notification to it
             if (guild.channel && guild.notify) {
-                this.talk(guild.channels[guild.channel], guild.notify.replace(/@\{memberName\}/g, member.displayName));
+                this.talk(guild.channels.get(guild.channel), guild.notify.replace(/@\{memberName\}/g, member.displayName));
             }
 
             return true;

@@ -1,6 +1,3 @@
-// Setup the updater from github
-require('./.gitupdate.js');
-
 const Discord = require('discord.js'),
     fs = require('fs'),
     path = require('path');
@@ -40,4 +37,3 @@ apollon.login(global.config.mode === 'dev' ? global.credentials.devToken : globa
     apollon.error('Apollon failed to connect');
     process.exit();
 });
-

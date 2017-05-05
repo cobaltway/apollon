@@ -18,6 +18,8 @@
                     },
                     {
                         "name": "Courant Anarchostalinien",
+                        "channel": "310033850795294723",
+                        "notify": "Bonjour @{memberName} bienvenue sur le discord du Courant. La gentille tchéka va vérifier que tu ne sois pas un troll faf ou libéral, pendant ce temps tu peux dire bonjour.",
                         "message": ["Bonsoir wesh bonsoir. Bienvenue sur le discord du glorieux Courant Anarchostalinien. Pose toi, prends une bière, hésite pas à dire bonjour, on ne mord que les bourgeois et les fascistes."]
                     },
                     {

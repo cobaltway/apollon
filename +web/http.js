@@ -5,15 +5,19 @@ const port = global.config.web.port,
     user = global.credentials.user,
     password = global.credentials.password;
 
-httpServer.use(require('express-basic-auth')({ // Lock the http access
-    users: { [user]: password },
-    challenge: true,
-    realm: 'Apollon heart'
-}));
+module.exports = function() {
+    httpServer.use(require('express-basic-auth')({ // Lock the http access
+        users: { [user]: password },
+        challenge: true,
+        realm: 'Apollon heart'
+    }));
 
-httpServer.use(express.static('data')); // Serve log files
-httpServer.listen(port, () => { // Make it listen for incoming http requests
-    console.log(`Http server is listening on port ${port}!`);
-});
+    require('./balloterHandler').call(this, httpServer);
 
-module.exports = httpServer;
+    httpServer.use(express.static('data')); // Serve log files
+    httpServer.listen(port, () => { // Make it listen for incoming http requests
+        console.log(`Http server is listening on port ${port}!`);
+    });
+
+    return httpServer;
+};

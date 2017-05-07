@@ -21,7 +21,7 @@ module.exports = function(message) {
         if (this.deleteMessages(message)) {
             return;
         }
-        console.log(message.guild.memberCount, message.guild.members.keys().length);
+        console.log(message.guild.memberCount, message.guild.members.size);
     }
 
     if (this.lmgtfy(message)) {

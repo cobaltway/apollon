@@ -7,7 +7,7 @@ global.credentials = JSON.parse(fs.readFileSync(path.join(__dirname, 'credential
 
 const apollon = new Discord.Client();
 
-apollon.web = require('./+web/http.js').call(this); // Start the http server
+apollon.web = require('./+web/http.js').call(apollon); // Start the http server
 
 // Extends bot prototype with util functions
 const utils = fs.readdirSync('./+utils');

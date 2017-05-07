@@ -1,5 +1,5 @@
 {
-    "mode": "prod",
+    "mode": "dev",
     "utils": {
         "isMaster": {
             "masters": ["FluffyCobalt", "catboyking"]

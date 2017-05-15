@@ -9,21 +9,27 @@ const apollon = new Discord.Client();
 
 apollon.web = require('./+web/http.js').call(apollon); // Start the http server
 
+// CRON tasks
+const cron = fs.readdirSync('./+cron');
+cron.forEach(c => {
+    require('./+cron/' + c).call(apollon);
+});
+
 // Extends bot prototype with util functions
 const utils = fs.readdirSync('./+utils');
-utils.forEach((u) => {
+utils.forEach(u => {
     apollon[u.replace('.js', '')] = require('./+utils/' + u).bind(apollon);
 });
 
 // Extends bot prototype with action functions
 const actions = fs.readdirSync('./+actions');
-actions.forEach((a) => {
+actions.forEach(a => {
     apollon[a.replace('.js', '')] = require('./+actions/' + a).bind(apollon);
 });
 
 // Handle events
 const events = fs.readdirSync('./+events');
-events.forEach((e) => {
+events.forEach(e => {
     apollon.on(e.replace('.js', ''), require('./+events/' + e).bind(apollon));
 });
 

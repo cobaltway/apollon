@@ -96,6 +96,14 @@
                         ]
                     }
                 ]
+        },
+        "calendrier": {
+            "guilds": [
+                {
+                    "name": "Résistance & Révolution",
+                    "channel": "306170636051677194"
+                }
+            ]
         }
     }
 }
